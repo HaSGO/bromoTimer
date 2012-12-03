@@ -1,3 +1,8 @@
 #ignore EAGLE backups
 *.s#*
 *.b#*
+bromoTimer.X/funclist
+bromoTimer.X/.dep.inc
+bromoTimer.X/build/*
+bromoTimer.X/dist/*
+bromoTimer.X/nbproject/private/*
