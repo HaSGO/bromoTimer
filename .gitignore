@@ -1,6 +1,8 @@
 #ignore EAGLE backups
 *.s#*
 *.b#*
+
+#MPLAB X stuff
 bromoTimer.X/funclist
 bromoTimer.X/.dep.inc
 bromoTimer.X/build/*
