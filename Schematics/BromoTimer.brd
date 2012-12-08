@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2268,20 +2268,20 @@ design rules under a new name.</description>
 <contactref element="Q1" pad="3"/>
 <contactref element="Q2" pad="3"/>
 <contactref element="C1" pad="-"/>
-<contactref element="B1" pad="+"/>
 <contactref element="SV1" pad="1"/>
 <contactref element="X4" pad="1"/>
-<wire x1="19.05" y1="67.31" x2="46.99" y2="67.31" width="0" layer="19" extent="1-1"/>
-<wire x1="2.54" y1="67.31" x2="19.05" y2="67.31" width="0" layer="19" extent="1-1"/>
-<wire x1="12.7" y1="52.07" x2="19.05" y2="67.31" width="0" layer="19" extent="1-1"/>
-<wire x1="8.382" y1="41.91" x2="12.7" y2="52.07" width="0" layer="19" extent="1-1"/>
-<wire x1="2.54" y1="41.91" x2="8.382" y2="41.91" width="0" layer="19" extent="1-1"/>
-<wire x1="5.08" y1="29.21" x2="2.54" y2="41.91" width="0" layer="19" extent="1-1"/>
-<wire x1="42.545" y1="50.8" x2="2.54" y2="41.91" width="0" layer="19" extent="1-1"/>
+<contactref element="B1" pad="-"/>
+<wire x1="42.545" y1="50.8" x2="46.99" y2="67.31" width="0" layer="19" extent="1-1"/>
 <wire x1="44.45" y1="36.83" x2="42.545" y2="50.8" width="0" layer="19" extent="1-1"/>
 <wire x1="29.21" y1="36.83" x2="44.45" y2="36.83" width="0" layer="19" extent="1-1"/>
-<wire x1="5.08" y1="50.8" x2="29.21" y2="36.83" width="0" layer="19" extent="1-1"/>
+<wire x1="10.16" y1="34.29" x2="29.21" y2="36.83" width="0" layer="19" extent="1-1"/>
+<wire x1="8.382" y1="41.91" x2="10.16" y2="34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="2.54" y1="41.91" x2="8.382" y2="41.91" width="0" layer="19" extent="1-1"/>
+<wire x1="5.08" y1="50.8" x2="2.54" y2="41.91" width="0" layer="19" extent="1-1"/>
+<wire x1="12.7" y1="52.07" x2="5.08" y2="50.8" width="0" layer="19" extent="1-1"/>
 <wire x1="3.81" y1="58.42" x2="5.08" y2="50.8" width="0" layer="19" extent="1-1"/>
+<wire x1="2.54" y1="67.31" x2="3.81" y2="58.42" width="0" layer="19" extent="1-1"/>
+<wire x1="19.05" y1="67.31" x2="12.7" y2="52.07" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RS">
 <contactref element="SV2" pad="4"/>
@@ -2422,11 +2422,11 @@ design rules under a new name.</description>
 <wire x1="2.87" y1="24.4" x2="5.08" y2="34.29" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="V+">
-<contactref element="B1" pad="-"/>
 <contactref element="C1" pad="+"/>
 <contactref element="IC2" pad="1"/>
-<wire x1="10.16" y1="34.29" x2="11.938" y2="41.91" width="0" layer="19" extent="1-1"/>
-<wire x1="2.54" y1="39.37" x2="10.16" y2="34.29" width="0" layer="19" extent="1-1"/>
+<contactref element="B1" pad="+"/>
+<wire x1="2.54" y1="39.37" x2="11.938" y2="41.91" width="0" layer="19" extent="1-1"/>
+<wire x1="5.08" y1="29.21" x2="2.54" y2="39.37" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$13">
 <contactref element="X4" pad="2"/>
