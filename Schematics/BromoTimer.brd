@@ -1953,25 +1953,30 @@ We've spent an enormous amount of time creating and checking these footprints an
 General Instrument, Semikron, Diotec, Fagor&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="RB1A">
+<package name="2KBB-R">
 <description>&lt;b&gt;RECTIFIER&lt;/b&gt;&lt;p&gt;
-1 A</description>
-<wire x1="-4.064" y1="2.54" x2="-4.064" y2="-2.54" width="0.1524" layer="21" curve="-297.029507"/>
-<wire x1="-4.064" y1="-2.54" x2="-4.064" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="2.54" x2="-0.254" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="-0.762" y1="2.032" x2="-0.762" y2="3.048" width="0.1524" layer="21"/>
-<wire x1="0.254" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="-2.921" y1="-2.54" x2="-2.2606" y2="-2.54" width="0.1524" layer="51" curve="-180"/>
-<wire x1="-2.2606" y1="-2.54" x2="-1.6002" y2="-2.54" width="0.1524" layer="51" curve="180"/>
-<wire x1="1.524" y1="2.54" x2="2.1844" y2="2.54" width="0.1524" layer="51" curve="-180"/>
-<wire x1="2.1844" y1="2.54" x2="2.8448" y2="2.54" width="0.1524" layer="51" curve="180"/>
-<pad name="+" x="-2.54" y="2.54" drill="1.016"/>
-<pad name="AC1" x="2.54" y="2.54" drill="1.016" shape="octagon"/>
-<pad name="-" x="2.54" y="-2.54" drill="1.016" shape="octagon"/>
-<pad name="AC2" x="-2.54" y="-2.54" drill="1.016" shape="octagon"/>
-<text x="-4.6736" y="-2.5146" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="-3.3782" y="-0.6604" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-4.445" y1="-4.445" x2="4.445" y2="4.445" layer="43"/>
+grid 3 x 5 mm</description>
+<wire x1="-8.89" y1="-3.429" x2="-8.89" y2="3.429" width="0.1524" layer="21"/>
+<wire x1="8.89" y1="3.429" x2="8.89" y2="-3.429" width="0.1524" layer="21"/>
+<wire x1="-8.89" y1="3.429" x2="5.969" y2="3.429" width="0.1524" layer="21"/>
+<wire x1="5.969" y1="3.429" x2="5.969" y2="-3.429" width="0.1524" layer="21"/>
+<wire x1="5.969" y1="3.429" x2="8.89" y2="3.429" width="0.1524" layer="21"/>
+<wire x1="5.969" y1="-3.429" x2="-8.89" y2="-3.429" width="0.1524" layer="21"/>
+<wire x1="6.858" y1="-2.54" x2="7.874" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-8.128" y1="-2.54" x2="-7.112" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-2.6416" y1="-2.54" x2="-1.9812" y2="-2.54" width="0.1524" layer="21" curve="180"/>
+<wire x1="-3.302" y1="-2.54" x2="-2.6416" y2="-2.54" width="0.1524" layer="21" curve="-180"/>
+<wire x1="2.3114" y1="-2.54" x2="2.9718" y2="-2.54" width="0.1524" layer="21" curve="180"/>
+<wire x1="1.651" y1="-2.54" x2="2.3114" y2="-2.54" width="0.1524" layer="21" curve="-180"/>
+<wire x1="8.89" y1="-3.429" x2="5.969" y2="-3.429" width="0.1524" layer="21"/>
+<wire x1="-7.62" y1="-3.048" x2="-7.62" y2="-2.032" width="0.1524" layer="21"/>
+<pad name="-" x="7.3914" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="+" x="-7.62" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="AC2" x="2.413" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="AC1" x="-2.6162" y="0" drill="1.016" shape="long" rot="R90"/>
+<text x="-8.89" y="3.81" size="1.778" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="3.81" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-9.017" y1="-3.556" x2="9.017" y2="3.556" layer="43"/>
 </package>
 </packages>
 </library>
@@ -2349,7 +2354,7 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="-10.16" y="-3.81" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="U$1" library="SparkFun" package="TRANSFORMER" value="TRANSFORMERPTH" x="7.62" y="19.05" rot="R90"/>
-<element name="B1" library="rectifier" package="RB1A" value="" x="7.62" y="31.75" rot="R90"/>
+<element name="B1" library="rectifier" package="2KBB-R" value="" x="7.62" y="31.75" rot="R90"/>
 <element name="D1" library="diode" package="DO35-7" value="1N4148DO35-7" x="3.81" y="-6.35"/>
 <element name="D2" library="diode" package="DO35-7" value="1N4148DO35-7" x="3.81" y="-12.7"/>
 <element name="SV3" library="con-lstb" package="MA05-1" value="ICSP" x="5.08" y="-20.32">
@@ -2410,14 +2415,14 @@ design rules under a new name.</description>
 <wire x1="42.545" y1="50.8" x2="46.99" y2="67.31" width="0" layer="19" extent="1-1"/>
 <wire x1="44.45" y1="36.83" x2="42.545" y2="50.8" width="0" layer="19" extent="1-1"/>
 <wire x1="29.21" y1="36.83" x2="44.45" y2="36.83" width="0" layer="19" extent="1-1"/>
-<wire x1="10.16" y1="34.29" x2="29.21" y2="36.83" width="0" layer="19" extent="1-1"/>
-<wire x1="8.382" y1="41.91" x2="10.16" y2="34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="7.62" y1="39.1414" x2="29.21" y2="36.83" width="0" layer="19" extent="1-1"/>
+<wire x1="8.382" y1="41.91" x2="7.62" y2="39.1414" width="0" layer="19" extent="1-1"/>
 <wire x1="2.54" y1="41.91" x2="8.382" y2="41.91" width="0" layer="19" extent="1-1"/>
 <wire x1="5.08" y1="50.8" x2="2.54" y2="41.91" width="0" layer="19" extent="1-1"/>
 <wire x1="12.7" y1="52.07" x2="5.08" y2="50.8" width="0" layer="19" extent="1-1"/>
 <wire x1="19.05" y1="67.31" x2="12.7" y2="52.07" width="0" layer="19" extent="1-1"/>
 <wire x1="2.54" y1="67.31" x2="19.05" y2="67.31" width="0" layer="19" extent="1-1"/>
-<wire x1="7.62" y1="-6.35" x2="10.16" y2="34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="7.62" y1="-6.35" x2="7.62" y2="39.1414" width="0" layer="19" extent="1-1"/>
 <wire x1="7.62" y1="-12.7" x2="7.62" y2="-6.35" width="0" layer="19" extent="1-1"/>
 <wire x1="5.08" y1="-20.32" x2="7.62" y2="-12.7" width="0" layer="19" extent="1-1"/>
 <wire x1="1.27" y1="-34.29" x2="5.08" y2="-20.32" width="0" layer="19" extent="1-1"/>
@@ -2560,12 +2565,12 @@ design rules under a new name.</description>
 <signal name="N$2">
 <contactref element="U$1" pad="3"/>
 <contactref element="B1" pad="AC2"/>
-<wire x1="12.37" y1="24.4" x2="10.16" y2="29.21" width="0" layer="19" extent="1-1"/>
+<wire x1="12.37" y1="24.4" x2="7.62" y2="34.163" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$12">
 <contactref element="B1" pad="AC1"/>
 <contactref element="U$1" pad="4"/>
-<wire x1="2.87" y1="24.4" x2="5.08" y2="34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="2.87" y1="24.4" x2="7.62" y2="29.1338" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="V+">
 <contactref element="C1" pad="+"/>
@@ -2580,8 +2585,8 @@ design rules under a new name.</description>
 <wire x1="26.67" y1="31.75" x2="39.37" y2="31.75" width="0" layer="19" extent="1-1"/>
 <wire x1="11.938" y1="41.91" x2="26.67" y2="31.75" width="0" layer="19" extent="1-1"/>
 <wire x1="2.54" y1="39.37" x2="11.938" y2="41.91" width="0" layer="19" extent="1-1"/>
-<wire x1="5.08" y1="29.21" x2="2.54" y2="39.37" width="0" layer="19" extent="1-1"/>
-<wire x1="0" y1="-6.35" x2="5.08" y2="29.21" width="0" layer="19" extent="1-1"/>
+<wire x1="7.62" y1="24.13" x2="2.54" y2="39.37" width="0" layer="19" extent="1-1"/>
+<wire x1="0" y1="-6.35" x2="7.62" y2="24.13" width="0" layer="19" extent="1-1"/>
 <wire x1="0" y1="-12.7" x2="0" y2="-6.35" width="0" layer="19" extent="1-1"/>
 <wire x1="0" y1="-27.94" x2="0" y2="-12.7" width="0" layer="19" extent="1-1"/>
 <wire x1="-5.08" y1="-34.29" x2="0" y2="-27.94" width="0" layer="19" extent="1-1"/>
