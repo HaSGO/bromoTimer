@@ -17039,9 +17039,9 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 </net>
 <net name="N$17" class="0">
 <segment>
-<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="IC1" gate="G$1" pin="5"/>
-<wire x1="86.36" y1="116.84" x2="106.68" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="116.84" x2="106.68" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -17054,8 +17054,8 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <net name="N$18" class="0">
 <segment>
 <pinref part="Q3" gate="G$1" pin="B"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="73.66" y1="116.84" x2="76.2" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="116.84" x2="86.36" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$19" class="0">
