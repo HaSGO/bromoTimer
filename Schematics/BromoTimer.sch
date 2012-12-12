@@ -16431,7 +16431,7 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 </classes>
 <parts>
 <part name="IC1" library="ic-package" deviceset="DIL20" device="S" value="PIC16F687"/>
-<part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
+<part name="FRAME1" library="frames" deviceset="A4L-LOC" device="" value="Draft2"/>
 <part name="SV1" library="con-lsta" deviceset="FE06-1" device="" value="ENCODER"/>
 <part name="SV2" library="con-lsta" deviceset="FE12-1" device="" value="DISPLAY"/>
 <part name="IC2" library="linear" deviceset="78*" device="TV" technology="05"/>
@@ -16444,8 +16444,8 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
-<part name="R1" library="pot" deviceset="TRIM_EU-" device="B25V"/>
-<part name="R2" library="pot" deviceset="TRIM_EU-" device="B25V"/>
+<part name="R1" library="pot" deviceset="TRIM_EU-" device="B25V" value="100k"/>
+<part name="R2" library="pot" deviceset="TRIM_EU-" device="B25V" value="100k"/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="Q1" library="transistor-npn" deviceset="BC548*" device="" technology="B" value="BC548B"/>
 <part name="Q2" library="transistor-npn" deviceset="BC548*" device="" technology="B" value="BC548B"/>
@@ -16483,9 +16483,9 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <part name="X4" library="con-molex" deviceset="22-23-2031" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="SG1" library="buzzer" deviceset="EB2209A" device=""/>
-<part name="TR1" library="trafo" deviceset="EI38-1" device=""/>
-<part name="C3" library="rcl" deviceset="C-EU" device="050-050X075"/>
-<part name="R6" library="rcl" deviceset="R-EU_" device="0207/10"/>
+<part name="TR1" library="trafo" deviceset="EI38-1" device="" value="220/12"/>
+<part name="C3" library="rcl" deviceset="C-EU" device="050-050X075" value="330n"/>
+<part name="R6" library="rcl" deviceset="R-EU_" device="0207/10" value="470"/>
 <part name="X1" library="con-phoenix-508" deviceset="MKDSN1,5/3-5,08" device="" value="AC_IN"/>
 <part name="X5" library="con-phoenix-508" deviceset="MKDSN1,5/5-5,08" device="" value="AC_OUT"/>
 </parts>
@@ -16940,23 +16940,13 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <wire x1="213.36" y1="33.02" x2="223.52" y2="33.02" width="0.1524" layer="91"/>
 <label x="213.36" y="30.48" size="1.778" layer="95"/>
 </segment>
-<segment>
-<wire x1="20.32" y1="71.12" x2="33.02" y2="71.12" width="0.1524" layer="91"/>
-<label x="25.4" y="63.5" size="1.778" layer="95"/>
-<pinref part="X1" gate="-1" pin="KL"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="B1" gate="1" pin="AC2"/>
-<wire x1="45.72" y1="73.66" x2="60.96" y2="73.66" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="N$12" class="0">
 <segment>
 <pinref part="B1" gate="1" pin="AC1"/>
 <wire x1="60.96" y1="83.82" x2="53.34" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="83.82" x2="53.34" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="TR1" gate="1" pin="S4"/>
 <wire x1="53.34" y1="81.28" x2="45.72" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -17081,6 +17071,20 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <pinref part="X4" gate="-1" pin="S"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="134.62" x2="93.98" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="B1" gate="1" pin="AC2"/>
+<pinref part="TR1" gate="1" pin="S3"/>
+<wire x1="60.96" y1="73.66" x2="45.72" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="X1" gate="-1" pin="KL"/>
+<pinref part="TR1" gate="1" pin="P2"/>
+<wire x1="20.32" y1="71.12" x2="33.02" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
