@@ -16941,6 +16941,11 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <wire x1="195.58" y1="33.02" x2="205.74" y2="33.02" width="0.1524" layer="91"/>
 <label x="195.58" y="30.48" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="X1" gate="-1" pin="KL"/>
+<pinref part="TR1" gate="1" pin="P2"/>
+<wire x1="20.32" y1="17.78" x2="33.02" y2="17.78" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$12" class="0">
 <segment>
@@ -17079,13 +17084,6 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <pinref part="B1" gate="1" pin="AC2"/>
 <pinref part="TR1" gate="1" pin="S3"/>
 <wire x1="60.96" y1="20.32" x2="45.72" y2="20.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$22" class="0">
-<segment>
-<pinref part="X1" gate="-1" pin="KL"/>
-<pinref part="TR1" gate="1" pin="P2"/>
-<wire x1="20.32" y1="17.78" x2="33.02" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
