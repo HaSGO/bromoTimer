@@ -16425,6 +16425,9 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="HV" width="1.27" drill="0">
+<clearance class="1" value="1.27"/>
+</class>
 </classes>
 <parts>
 <part name="IC1" library="ic-package" deviceset="DIL20" device="S" value="PIC16F687"/>
@@ -16882,35 +16885,35 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <junction x="205.74" y="93.98"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="N$8" class="1">
 <segment>
 <pinref part="K1" gate="2" pin="S"/>
 <wire x1="223.52" y1="101.6" x2="236.22" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="X5" gate="-1" pin="KL"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="N$9" class="1">
 <segment>
 <pinref part="K1" gate="3" pin="S"/>
 <wire x1="236.22" y1="86.36" x2="223.52" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="X5" gate="-2" pin="KL"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="N$10" class="1">
 <segment>
 <pinref part="K2" gate="2" pin="S"/>
 <wire x1="236.22" y1="58.42" x2="223.52" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="X5" gate="-4" pin="KL"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="N$11" class="1">
 <segment>
 <pinref part="K2" gate="3" pin="S"/>
 <wire x1="236.22" y1="43.18" x2="223.52" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="X5" gate="-5" pin="KL"/>
 </segment>
 </net>
-<net name="AC2" class="0">
+<net name="AC2" class="1">
 <segment>
 <pinref part="K1" gate="2" pin="P"/>
 <wire x1="223.52" y1="91.44" x2="215.9" y2="91.44" width="0.1524" layer="91"/>
@@ -16928,7 +16931,7 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <wire x1="22.86" y1="81.28" x2="20.32" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="AC1" class="0">
+<net name="AC1" class="1">
 <segment>
 <pinref part="K1" gate="3" pin="P"/>
 <wire x1="223.52" y1="76.2" x2="213.36" y2="76.2" width="0.1524" layer="91"/>
