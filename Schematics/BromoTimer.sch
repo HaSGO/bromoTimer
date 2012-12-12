@@ -16417,6 +16417,129 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="fuse">
+<description>&lt;b&gt;Fuses and Fuse Holders&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="GSH15">
+<description>&lt;b&gt;FUSE HOLDER&lt;/b&gt;&lt;p&gt;
+grid 15mm, 19649 Wickmann</description>
+<wire x1="-12.573" y1="-4.572" x2="-12.573" y2="4.572" width="0.1524" layer="21"/>
+<wire x1="12.573" y1="4.572" x2="12.573" y2="-4.572" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="2.921" x2="5.08" y2="2.921" width="0.0508" layer="21"/>
+<wire x1="-11.43" y1="3.683" x2="-8.382" y2="3.683" width="0.1524" layer="21"/>
+<wire x1="-11.43" y1="-3.683" x2="-11.43" y2="3.683" width="0.1524" layer="21"/>
+<wire x1="11.43" y1="3.683" x2="11.43" y2="-3.683" width="0.1524" layer="21"/>
+<wire x1="-5.207" y1="0" x2="5.207" y2="0" width="0.0508" layer="21"/>
+<wire x1="12.573" y1="-4.572" x2="5.08" y2="-4.572" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="-3.048" x2="5.08" y2="-3.683" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="-3.048" x2="-5.08" y2="-3.048" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-4.572" x2="-12.573" y2="-4.572" width="0.1524" layer="21"/>
+<wire x1="-12.573" y1="4.572" x2="-5.08" y2="4.572" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="3.048" x2="5.08" y2="3.048" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="4.572" x2="5.08" y2="3.683" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="4.572" x2="12.573" y2="4.572" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="-3.683" x2="6.858" y2="-3.683" width="0.1524" layer="21"/>
+<wire x1="6.858" y1="-4.191" x2="6.858" y2="-3.683" width="0.1524" layer="21"/>
+<wire x1="6.858" y1="-4.191" x2="8.382" y2="-4.191" width="0.1524" layer="21"/>
+<wire x1="8.382" y1="-3.683" x2="8.382" y2="-4.191" width="0.1524" layer="21"/>
+<wire x1="8.382" y1="-3.683" x2="11.43" y2="-3.683" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="3.683" x2="6.858" y2="3.683" width="0.1524" layer="21"/>
+<wire x1="6.858" y1="4.191" x2="6.858" y2="3.683" width="0.1524" layer="21"/>
+<wire x1="6.858" y1="4.191" x2="8.382" y2="4.191" width="0.1524" layer="21"/>
+<wire x1="8.382" y1="3.683" x2="8.382" y2="4.191" width="0.1524" layer="21"/>
+<wire x1="8.382" y1="3.683" x2="11.43" y2="3.683" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="3.683" x2="5.08" y2="3.048" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="-3.683" x2="5.08" y2="-4.572" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="3.048" x2="-5.08" y2="3.683" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="3.683" x2="-5.08" y2="4.572" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-4.572" x2="-5.08" y2="-3.683" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-3.683" x2="-5.08" y2="-3.048" width="0.1524" layer="21"/>
+<wire x1="-6.858" y1="3.683" x2="-5.08" y2="3.683" width="0.1524" layer="21"/>
+<wire x1="-6.858" y1="4.191" x2="-6.858" y2="3.683" width="0.1524" layer="21"/>
+<wire x1="-8.382" y1="4.191" x2="-6.858" y2="4.191" width="0.1524" layer="21"/>
+<wire x1="-8.382" y1="3.683" x2="-8.382" y2="4.191" width="0.1524" layer="21"/>
+<wire x1="-6.858" y1="-3.683" x2="-5.08" y2="-3.683" width="0.1524" layer="21"/>
+<wire x1="-6.858" y1="-4.191" x2="-6.858" y2="-3.683" width="0.1524" layer="21"/>
+<wire x1="-8.382" y1="-4.191" x2="-6.858" y2="-4.191" width="0.1524" layer="21"/>
+<wire x1="-8.382" y1="-3.683" x2="-8.382" y2="-4.191" width="0.1524" layer="21"/>
+<wire x1="-8.382" y1="-3.683" x2="-11.43" y2="-3.683" width="0.1524" layer="21"/>
+<pad name="1" x="-7.62" y="0" drill="1.3208" diameter="2.54" shape="long" rot="R90"/>
+<pad name="2" x="7.62" y="0" drill="1.3208" diameter="2.54" shape="long" rot="R90"/>
+<text x="-4.4196" y="3.6068" size="1.778" layer="25" ratio="10">&gt;NAME</text>
+<text x="-4.4196" y="-5.461" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-5.08" y1="1.651" x2="5.08" y2="2.159" layer="21"/>
+<rectangle x1="-5.08" y1="-2.159" x2="5.08" y2="-1.651" layer="21"/>
+<rectangle x1="5.08" y1="-3.175" x2="5.715" y2="-1.524" layer="21"/>
+<rectangle x1="5.08" y1="1.524" x2="5.715" y2="3.175" layer="21"/>
+<rectangle x1="5.08" y1="-1.524" x2="5.715" y2="1.524" layer="51"/>
+<rectangle x1="10.287" y1="-2.032" x2="10.541" y2="2.032" layer="21"/>
+<rectangle x1="6.731" y1="1.905" x2="8.509" y2="2.032" layer="51"/>
+<rectangle x1="6.731" y1="-2.032" x2="8.509" y2="-1.905" layer="51"/>
+<rectangle x1="5.715" y1="2.032" x2="10.541" y2="3.175" layer="21"/>
+<rectangle x1="5.715" y1="-3.175" x2="10.541" y2="-2.032" layer="21"/>
+<rectangle x1="7.112" y1="-3.937" x2="8.128" y2="-3.175" layer="21"/>
+<rectangle x1="7.112" y1="3.175" x2="8.128" y2="3.937" layer="21"/>
+<rectangle x1="-5.715" y1="-1.524" x2="-5.08" y2="1.524" layer="51"/>
+<rectangle x1="-5.715" y1="1.524" x2="-5.08" y2="3.175" layer="21"/>
+<rectangle x1="-5.715" y1="-3.175" x2="-5.08" y2="-1.524" layer="21"/>
+<rectangle x1="-10.541" y1="-3.175" x2="-5.715" y2="-2.032" layer="21"/>
+<rectangle x1="-8.509" y1="-2.032" x2="-6.731" y2="-1.905" layer="51"/>
+<rectangle x1="-10.541" y1="-2.032" x2="-10.287" y2="2.032" layer="21"/>
+<rectangle x1="-8.509" y1="1.905" x2="-6.731" y2="2.032" layer="51"/>
+<rectangle x1="-10.541" y1="2.032" x2="-5.715" y2="3.175" layer="21"/>
+<rectangle x1="-8.128" y1="3.175" x2="-7.112" y2="3.937" layer="21"/>
+<rectangle x1="-8.128" y1="-3.937" x2="-7.112" y2="-3.175" layer="21"/>
+<rectangle x1="5.715" y1="-2.032" x2="6.731" y2="-1.905" layer="21"/>
+<rectangle x1="5.715" y1="1.905" x2="6.731" y2="2.032" layer="21"/>
+<rectangle x1="8.509" y1="1.905" x2="10.287" y2="2.032" layer="21"/>
+<rectangle x1="8.509" y1="-2.032" x2="10.287" y2="-1.905" layer="21"/>
+<rectangle x1="-10.287" y1="1.905" x2="-8.509" y2="2.032" layer="21"/>
+<rectangle x1="-6.731" y1="1.905" x2="-5.715" y2="2.032" layer="21"/>
+<rectangle x1="-6.731" y1="-2.032" x2="-5.715" y2="-1.905" layer="21"/>
+<rectangle x1="-10.287" y1="-2.032" x2="-8.509" y2="-1.905" layer="21"/>
+<hole x="0" y="0" drill="2.794"/>
+</package>
+</packages>
+<symbols>
+<symbol name="FUSE">
+<wire x1="-3.81" y1="-0.762" x2="3.81" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="3.81" y1="0.762" x2="-3.81" y2="0.762" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-0.762" x2="3.81" y2="0.762" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="0.762" x2="-3.81" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<text x="-3.81" y="1.397" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-2.921" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GSH15" prefix="F" uservalue="yes">
+<description>&lt;b&gt;FUSE HOLDER&lt;/b&gt;&lt;p&gt;
+grid 15mm, 19649 Wickmann</description>
+<gates>
+<gate name="1" symbol="FUSE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GSH15">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="64900001039" constant="no"/>
+<attribute name="OC_FARNELL" value="1271673" constant="no"/>
+<attribute name="OC_NEWARK" value="02P0318" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -16488,6 +16611,7 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <part name="R6" library="rcl" deviceset="R-EU_" device="0207/10" value="470"/>
 <part name="X1" library="con-phoenix-508" deviceset="MKDSN1,5/3-5,08" device="" value="AC_IN"/>
 <part name="X5" library="con-phoenix-508" deviceset="MKDSN1,5/5-5,08" device="" value="AC_OUT"/>
+<part name="F1" library="fuse" deviceset="GSH15" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16546,7 +16670,7 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <instance part="X4" gate="-3" x="149.86" y="116.84"/>
 <instance part="GND9" gate="1" x="144.78" y="111.76"/>
 <instance part="SG1" gate="G$1" x="66.04" y="129.54" rot="MR270"/>
-<instance part="TR1" gate="1" x="38.1" y="25.4"/>
+<instance part="TR1" gate="1" x="45.72" y="25.4"/>
 <instance part="C3" gate="G$1" x="27.94" y="55.88"/>
 <instance part="R6" gate="G$1" x="91.44" y="127" rot="R90"/>
 <instance part="X1" gate="-1" x="17.78" y="17.78" rot="R180"/>
@@ -16555,6 +16679,7 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <instance part="X5" gate="-2" x="220.98" y="86.36"/>
 <instance part="X5" gate="-4" x="220.98" y="58.42"/>
 <instance part="X5" gate="-5" x="220.98" y="43.18"/>
+<instance part="F1" gate="1" x="27.94" y="27.94"/>
 </instances>
 <busses>
 <bus name="RS,RW,EN,B0,B1,B2,B3">
@@ -16944,12 +17069,12 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <label x="198.12" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="22.86" y1="30.48" x2="33.02" y2="30.48" width="0.1524" layer="91"/>
-<label x="25.4" y="30.48" size="1.778" layer="95"/>
+<wire x1="35.56" y1="30.48" x2="40.64" y2="30.48" width="0.1524" layer="91"/>
+<label x="35.56" y="30.48" size="1.778" layer="95"/>
 <pinref part="TR1" gate="1" pin="P1"/>
-<pinref part="X1" gate="-3" pin="KL"/>
-<wire x1="22.86" y1="30.48" x2="22.86" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="27.94" x2="20.32" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="F1" gate="1" pin="2"/>
+<wire x1="33.02" y1="27.94" x2="35.56" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="27.94" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="AC1" class="1">
@@ -16964,7 +17089,7 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <segment>
 <pinref part="X1" gate="-1" pin="KL"/>
 <pinref part="TR1" gate="1" pin="P2"/>
-<wire x1="20.32" y1="17.78" x2="33.02" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="17.78" x2="40.64" y2="17.78" width="0.1524" layer="91"/>
 <label x="25.4" y="15.24" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -16974,7 +17099,6 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <wire x1="60.96" y1="30.48" x2="53.34" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="30.48" x2="53.34" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="TR1" gate="1" pin="S4"/>
-<wire x1="53.34" y1="27.94" x2="45.72" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="V+" class="0">
@@ -17084,7 +17208,14 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <segment>
 <pinref part="B1" gate="1" pin="AC2"/>
 <pinref part="TR1" gate="1" pin="S3"/>
-<wire x1="60.96" y1="20.32" x2="45.72" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="20.32" x2="53.34" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="X1" gate="-3" pin="KL"/>
+<pinref part="F1" gate="1" pin="1"/>
+<wire x1="20.32" y1="27.94" x2="22.86" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
