@@ -16468,8 +16468,8 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="V+" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="P+5" library="supply1" deviceset="V+" device=""/>
-<part name="P+6" library="supply1" deviceset="V+" device=""/>
+<part name="P+5" library="supply1" deviceset="+5V" device=""/>
+<part name="P+6" library="supply1" deviceset="+5V" device=""/>
 <part name="D1" library="diode" deviceset="1N4148" device="DO35-7"/>
 <part name="D2" library="diode" deviceset="1N4148" device="DO35-7"/>
 <part name="SV3" library="con-lstb" deviceset="MA05-1" device="" value="ICSP"/>
@@ -16984,7 +16984,7 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <segment>
 <pinref part="K2" gate="1" pin="1"/>
 <wire x1="187.96" y1="68.58" x2="187.96" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="P+5" gate="1" pin="V+"/>
+<pinref part="P+5" gate="1" pin="+5V"/>
 <pinref part="D1" gate="G$1" pin="C"/>
 <wire x1="187.96" y1="66.04" x2="187.96" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="60.96" x2="170.18" y2="66.04" width="0.1524" layer="91"/>
@@ -16994,7 +16994,7 @@ Source: http://eshop.phoenixcontact.com .. 1729157.pdf</description>
 <segment>
 <pinref part="K1" gate="1" pin="1"/>
 <wire x1="187.96" y1="111.76" x2="187.96" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="P+6" gate="1" pin="V+"/>
+<pinref part="P+6" gate="1" pin="+5V"/>
 <pinref part="D2" gate="G$1" pin="C"/>
 <wire x1="187.96" y1="109.22" x2="187.96" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="104.14" x2="170.18" y2="109.22" width="0.1524" layer="91"/>
