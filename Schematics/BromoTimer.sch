@@ -15773,7 +15773,7 @@ CS PFP30, Schukat</description>
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0.4064" drill="0">
-<clearance class="0" value="0.127"/>
+<clearance class="0" value="0.4064"/>
 </class>
 <class number="1" name="HV" width="1.27" drill="0">
 <clearance class="1" value="1.27"/>
