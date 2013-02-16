@@ -16,9 +16,20 @@
 
 void InitApp(void)
 {
-    /* TODO Initialize User Ports/Peripherals/Project here */
+    /* Only output is RA4 */
+    /* Unused I/O:
+     *        xx       */
+    TRISA = 0b00110111;
 
-    /* Setup analog functionality and port direction */
+    WPUA  = 0b00110100;
+
+    /* All RB* are outputs used for the display */
+    /* Unused I/O:
+     *            xxxx */
+    TRISB = 0b00000000;
+
+    /* All the RC* are outputs */
+    TRISC = 0b00000000;
 
     /* Initialize peripherals */
 
