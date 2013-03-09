@@ -2,7 +2,7 @@
 /* Files to Include                                                           */
 /******************************************************************************/
 
-#include <htc.h>           /* Global Header File */
+#include <xc.h>           /* Global Header File */
 #include <stdint.h>        /* For uint8_t definition */
 #include <stdbool.h>       /* For true/false definition */
 
@@ -27,12 +27,14 @@ uint8_t main(void)
     /* Initialize I/O and Peripherals for application */
     InitApp();
 
-    /* TODO <INSERT USER APPLICATION CODE HERE> */
-
     while(1)
     {
-
+        BUZZER = 1;
+        __delay_ms(500);
+        BUZZER = 0;
+        __delay_ms(1000);
     }
 
+    return 0;
 }
 
