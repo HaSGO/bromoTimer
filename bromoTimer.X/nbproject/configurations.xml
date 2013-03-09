@@ -29,8 +29,6 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>getting_started.txt</itemPath>
-    <itemPath>legal_disclaimer.txt</itemPath>
     <itemPath>project_information.txt</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -42,8 +40,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit2PlatformTool</platformTool>
-        <languageToolchain>hi-tech-picc</languageToolchain>
-        <languageToolchainVersion>9.82</languageToolchainVersion>
+        <languageToolchain>XC8</languageToolchain>
+        <languageToolchainVersion>1.00</languageToolchainVersion>
         <platform>4</platform>
       </toolsSet>
       <compileType>
