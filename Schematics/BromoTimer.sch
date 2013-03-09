@@ -15862,11 +15862,11 @@ CS PFP30, Schukat</description>
 <instance part="GND2" gate="1" x="111.76" y="134.62"/>
 <instance part="P+2" gate="1" x="124.46" y="134.62"/>
 <instance part="GND3" gate="1" x="193.04" y="142.24"/>
-<instance part="GND4" gate="1" x="228.6" y="139.7"/>
+<instance part="GND4" gate="1" x="223.52" y="149.86"/>
 <instance part="P+3" gate="1" x="198.12" y="170.18"/>
-<instance part="R1" gate="G$1" x="220.98" y="147.32"/>
+<instance part="R1" gate="G$1" x="220.98" y="137.16"/>
 <instance part="R2" gate="G$1" x="200.66" y="147.32" rot="R180"/>
-<instance part="P+4" gate="1" x="215.9" y="142.24"/>
+<instance part="P+4" gate="1" x="228.6" y="144.78"/>
 <instance part="Q1" gate="G$1" x="185.42" y="86.36"/>
 <instance part="Q2" gate="G$1" x="185.42" y="43.18"/>
 <instance part="R3" gate="G$1" x="162.56" y="86.36"/>
@@ -15946,13 +15946,6 @@ CS PFP30, Schukat</description>
 <wire x1="198.12" y1="154.94" x2="198.12" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="215.9" y1="139.7" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="A"/>
-<wire x1="215.9" y1="137.16" x2="220.98" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="137.16" x2="220.98" y2="142.24" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="SV3" gate="G$1" pin="2"/>
 <wire x1="129.54" y1="162.56" x2="129.54" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="157.48" x2="116.84" y2="157.48" width="0.1524" layer="91"/>
@@ -15992,6 +15985,12 @@ CS PFP30, Schukat</description>
 <wire x1="170.18" y1="109.22" x2="187.96" y2="109.22" width="0.1524" layer="91"/>
 <junction x="187.96" y="109.22"/>
 </segment>
+<segment>
+<pinref part="P+4" gate="1" pin="+5V"/>
+<wire x1="228.6" y1="142.24" x2="228.6" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="S"/>
+<wire x1="228.6" y1="137.16" x2="226.06" y2="137.16" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -16027,8 +16026,6 @@ CS PFP30, Schukat</description>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="SV2" gate="G$1" pin="12"/>
-<wire x1="228.6" y1="142.24" x2="228.6" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="152.4" x2="223.52" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="152.4" x2="223.52" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -16152,7 +16149,7 @@ CS PFP30, Schukat</description>
 <net name="N$1" class="0">
 <segment>
 <pinref part="SV2" gate="G$1" pin="11"/>
-<wire x1="220.98" y1="154.94" x2="220.98" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="154.94" x2="220.98" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="E"/>
 </segment>
 </net>
