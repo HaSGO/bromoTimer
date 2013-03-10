@@ -6,8 +6,8 @@
 #define ENC_A RA0 /* Segnali quadratura encoder */
 #define ENC_B RA1
 #define ENC_SW RA5 /* Pulsante encoder */
-#define ENC_L1 RC6 /* LED 1 */
-#define ENC_L2 RC7 /* LED 2 */
+#define ENC_LR RC6 /* LED Rosso */
+#define ENC_LG RC7 /* LED Verde */
 
 /* Comandi frontalino */
 #define EXT_SW RA2 /* Pulsante di accensione esterno */

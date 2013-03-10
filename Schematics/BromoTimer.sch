@@ -16485,7 +16485,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0.4064" drill="0">
-<clearance class="0" value="0.4064"/>
+<clearance class="0" value="0.635"/>
 </class>
 <class number="1" name="HV" width="1.27" drill="0">
 <clearance class="1" value="1.27"/>
@@ -16864,9 +16864,9 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <wire x1="172.72" y1="154.94" x2="172.72" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="8"/>
-<wire x1="106.68" y1="109.22" x2="104.14" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="109.22" x2="104.14" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="9"/>
+<wire x1="106.68" y1="106.68" x2="101.6" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="106.68" x2="101.6" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L2" class="0">
@@ -16875,9 +16875,9 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <wire x1="175.26" y1="154.94" x2="175.26" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="9"/>
-<wire x1="106.68" y1="106.68" x2="101.6" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="106.68" x2="101.6" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="109.22" x2="104.14" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="8"/>
+<wire x1="104.14" y1="109.22" x2="106.68" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SW" class="0">
