@@ -2,7 +2,7 @@
 /* Files to Include                                                           */
 /******************************************************************************/
 
-#include <htc.h>            /* HiTech General Includes */
+#include <xc.h>            /* HiTech General Includes */
 #include <stdint.h>         /* For uint8_t definition */
 #include <stdbool.h>        /* For true/false definition */
 

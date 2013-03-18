@@ -2,7 +2,7 @@
 /* Main Files to Include                                                      */
 /******************************************************************************/
 
-#include <htc.h>            /* HiTech General Includes */
+#include <xc.h>            /* HiTech General Includes */
 
 /******************************************************************************/
 /* Configuration Bits                                                         */

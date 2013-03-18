@@ -43,7 +43,7 @@ user.c go in user.h.
 
 FILES INCLUDED IN THE PROJECT BUT NOT IN THE PROJECT TREE:
 
-#include <htc.h>             /* Global Header File */
+#include <xc.h>             /* Global Header File */
 #include <stdint.h>          /* For uint8_t definition */
 #include <stdbool.h>         /* For true/false definition */
 
