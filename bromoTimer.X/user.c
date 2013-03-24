@@ -30,6 +30,7 @@ void InitApp(void)
 
     /* All the RC* are outputs */
     TRISC = 0b00000000;
+    OPTION_REG &= 0b01111111;
 
     /* Initialize peripherals */
 
