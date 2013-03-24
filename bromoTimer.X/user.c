@@ -21,7 +21,7 @@ void InitApp(void)
      *        xx       */
     TRISA = 0b00110111;
 
-    WPUA  = 0b00110100;
+    WPUA  = 0b00110111;
 
     /* All RB* are outputs used for the display */
     /* Unused I/O:
