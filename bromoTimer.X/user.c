@@ -33,6 +33,9 @@ void InitApp(void)
     OPTION_REG &= 0b01111111;
 
     /* Initialize peripherals */
+    BUZZER = 0;
+    LAMP_1 = 0;
+    LAMP_2 = 0;
 
     /* Enable interrupts */
 }
