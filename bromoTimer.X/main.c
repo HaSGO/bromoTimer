@@ -29,12 +29,14 @@ uint8_t main(void)
 
     while(1)
     {
-        BUZZER = 1;
-        __delay_ms(500);
-        BUZZER = 0;
-        __delay_ms(1000);
-    }
 
+       if (ENC_A == 1 && ENC_B == 0) {
+        BUZZER = 1;
+        __delay_ms(20);
+       }
+       else {
+        BUZZER = 0;
+       }
+    }
     return 0;
 }
-
