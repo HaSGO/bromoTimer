@@ -1,6 +1,7 @@
 #ignore EAGLE backups
-*.s#*
-*.b#*
+Schematics/*.s#*
+Schematics/*.b#*
+Schematics/*.pro
 
 #MPLAB X stuff
 bromoTimer.X/funclist
