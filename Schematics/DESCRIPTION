@@ -1,0 +1,3 @@
+Timer for bromograph
+<p>
+Based on PIC16F687, it controls two UV lamps. It has support for a LCD display and a rotary encoder for time input.
