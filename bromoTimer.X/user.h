@@ -11,10 +11,10 @@
 
 /* Comandi frontalino */
 #define EXT_SW RA2 /* Pulsante di accensione esterno */
-#define EXT_LED RA3 /* Led esterno */
+#define EXT_LED RA4 /* Led esterno */
 
 /* Sensore stato coperchio */
-#define EXT_LID RA4
+#define EXT_LID RA3
 
 /* Comando buzzer */
 #define BUZZER RC5
