@@ -32,6 +32,8 @@ void InitApp(void)
 
     /* All the RC* are outputs */
     TRISC = 0b00000000;
+
+    /* enable weak pull-ups globally */
     OPTION_REG &= 0b01111111;
 
     /* Initialize peripherals */
