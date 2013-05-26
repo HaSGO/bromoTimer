@@ -20,9 +20,8 @@ void InitApp(void)
     /* Only output is RA4 */
     /* Unused I/O:
      *        xx       */
-    TRISA = 0b00110111;
-
-    WPUA  = 0b00110111;
+    TRISA = 0b00101111;
+    WPUA  = 0b00100111;
 
     /* All RB* are outputs used for the display */
     /* Unused I/O:
