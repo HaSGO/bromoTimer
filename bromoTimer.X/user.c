@@ -43,6 +43,9 @@ void InitApp(void)
     BUZZER = 0;
     LAMP_1 = 0;
     LAMP_2 = 0;
+    EXT_LED = 0;
+    ENC_LR = 0;
+    ENC_LG = 0;
 
     lcd_init();
 
