@@ -10,8 +10,7 @@
 
 /* Refer to the device datasheet for information about available
 oscillator configurations. */
-void ConfigureOscillator(void)
-{
+void ConfigureOscillator(void) {
     OSCCON=0b01000001; /* Oscillatore interno, 1MHz clock*/
 }
 

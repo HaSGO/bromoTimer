@@ -1,3 +1,5 @@
+#ifndef SYSTEM_H
+#define SYSTEM_H
 /******************************************************************************/
 /* System Level #define Macros                                                */
 /******************************************************************************/
@@ -56,3 +58,5 @@ go here. */
 void ConfigureOscillator(void); /* Handles clock switching/osc initialization */
 
 void PlayBuzzerMs(uint16_t duration);
+
+#endif

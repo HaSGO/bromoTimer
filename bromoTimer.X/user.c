@@ -27,8 +27,7 @@ void InitApp(void)
     /* Unused I/O:
      *            xxxx */
     TRISB = 0b00000000;
-    /* Disable pull-ups on PORTB */
-    WPUB  = 0b00000000;
+    WPUB  = 0b00000000; /* Disable pull-ups on PORTB */
 
     /* All the RC* are outputs */
     TRISC = 0b00000000;
