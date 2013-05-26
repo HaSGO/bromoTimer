@@ -29,14 +29,9 @@ uint8_t main(void)
 
     while(1)
     {
+    	BuzzerPlayMs(200);
+    	__delay_ms(200);
 
-       if (ENC_A == 1 && ENC_B == 0) {
-        BUZZER = 1;
-        __delay_ms(20);
-       }
-       else {
-        BUZZER = 0;
-       }
     }
     return 0;
 }
