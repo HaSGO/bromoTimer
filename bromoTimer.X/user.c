@@ -35,6 +35,10 @@ void InitApp(void)
     /* enable weak pull-ups globally */
     OPTION_REG &= 0b01111111;
 
+    /* Disable analog stuff */
+    ANSEL = 0;
+    ANSELH = 0;
+
     /* Initialize peripherals */
     BUZZER = 0;
     LAMP_1 = 0;
