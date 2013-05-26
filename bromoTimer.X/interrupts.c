@@ -6,35 +6,25 @@
 #include <stdint.h>         /* For uint8_t definition */
 #include <stdbool.h>        /* For true/false definition */
 
+#include "system.h"
+
 /******************************************************************************/
 /* Interrupt Routines                                                         */
 /******************************************************************************/
 
+static const int8_t enc_states[] = {0, -1, 1, 0, 1, 0, 0, -1, -1, 0, 0, 1, 0, 1, -1, 0};
+volatile uint16_t enc_val = 0;
+
 void interrupt isr(void)
 {
-    /* This code stub shows general interrupt handling.  Note that these
-    conditional statements are not handled within 3 seperate if blocks.
-    Do not use a seperate if block for each interrupt flag to avoid run
-    time errors. */
-
-#if 0
-    
-    /* TODO Add High Priority interrupt routine code here. */
-
-    /* Determine which flag generated the interrupt */
-    if(<Interrupt Flag 1>)
-    {
-        <Interrupt Flag 1=0>; /* Clear Interrupt Flag 1 */
+    static uint8_t old_AB = 0;
+    ENC_LR = 1;
+    di();
+    if (RABIF){
+        old_AB <<= 2; //remember previous state
+        old_AB |= (PORTA & 0x03); //add current state
+        enc_val += enc_states[(old_AB & 0x0f)];
+        RABIF = 0;
     }
-    else if (<Interrupt Flag 2>)
-    {
-        <Interrupt Flag 2=0>; /* Clear Interrupt Flag 2 */
-    }
-    else
-    {
-        /* Unhandled interrupts */
-    }
-
-#endif
-
+    ei();
 }

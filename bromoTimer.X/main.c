@@ -57,8 +57,9 @@ uint8_t main(void)
 
     while(1)
     {
-    	BuzzerPlayMs(200);
-    	__delay_ms(200);
+        lcd_command(LCD_COMMAND_CLEAR);
+        printf("\x2%u", enc_val);
+        __delay_ms(50);
     }
     return 0;
 }
