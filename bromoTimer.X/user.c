@@ -44,6 +44,8 @@ void InitApp(void)
     LAMP_1 = 0;
     LAMP_2 = 0;
 
+    lcd_init();
+
     /* Enable interrupts */
 }
 

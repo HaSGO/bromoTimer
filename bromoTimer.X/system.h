@@ -59,4 +59,6 @@ void ConfigureOscillator(void); /* Handles clock switching/osc initialization */
 
 void PlayBuzzerMs(uint16_t duration);
 
+void putch(char data);
+
 #endif

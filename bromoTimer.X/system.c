@@ -7,6 +7,7 @@
 #include <stdbool.h>       /* For true/false definition */
 
 #include "system.h"
+#include "lcd.h"
 
 /* Refer to the device datasheet for information about available
 oscillator configurations. */
@@ -22,4 +23,19 @@ void PlayBuzzerMs(uint16_t ms) {
             BUZZER=~BUZZER;
         }
     }
+}
+
+void putch(char data) {
+    static uint8_t counter = 0;
+    if (data == 2) {
+        counter = 0;
+        return;
+    }
+    if (counter == 0)
+        lcd_command(LCD_COMMAND_CLEAR);
+    else if (counter == 8) {
+        lcd_gotoxy(8,1);
+    }
+    counter++;
+    lcd_putc(data);
 }
