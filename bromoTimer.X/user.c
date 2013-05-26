@@ -7,6 +7,7 @@
 #include <stdbool.h>        /* For true/false definition */
 
 #include "user.h"
+#include "system.h"
 
 /******************************************************************************/
 /* User Functions                                                             */
