@@ -66,7 +66,7 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <HI-TECH-COMP>
-        <property key="define-macros" value=""/>
+        <property key="define-macros" value="__PICCPRO__"/>
         <property key="extra-include-directories" value=""/>
         <property key="identifier-length" value="255"/>
         <property key="operation-mode" value="free"/>
