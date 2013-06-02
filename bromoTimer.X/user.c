@@ -8,6 +8,7 @@
 
 #include "user.h"
 #include "system.h"
+#include "lcd.h"
 
 /******************************************************************************/
 /* User Functions                                                             */
