@@ -20,6 +20,7 @@
 
 /******************************************************************************/
 /* Main Program                                                               */
+
 /******************************************************************************/
 
 
@@ -50,16 +51,38 @@ uint8_t main(void)
     /* Initialize I/O and Peripherals for application */
     InitApp();
 
-    printf("\x2HaSGO Bromograph");
     if (ENC_SW == 0) {
+	printf("\x2Self test...");
+	__delay_ms(200);
         SelfTest();
+        printf("\x2...end");
+	__delay_ms(200);
     }
+    printf("\x2HaSGO Bromograph");
 
-    while(1)
-    {
-        lcd_command(LCD_COMMAND_CLEAR);
-        printf("\x2%u", enc_val);
-        __delay_ms(50);
+    static const int8_t enc_states[] = {0, -1, 1, 0, 1, 0, 0, -1, -1, 0, 0, 1, 0, 1, -1, 0};
+    volatile uint16_t enc_val = 0;
+    static uint8_t old_AB = 0;
+
+    while (1) {
+        switch (status) {
+            case mode_MENU:
+                printf("\x02Menu");
+                status = mode_NOP;
+                break;
+            case mode_VALUE:
+                old_AB <<= 2; //remember previous state
+                old_AB |= (PORTA & 0x03); //add current state
+                if (enc_states[(old_AB & 0x0f)]) {
+                    enc_val += enc_states[(old_AB & 0x0f)];
+                    lcd_command(LCD_COMMAND_CLEAR);
+                    printf("\x02Value: %d", enc_val);
+                }
+                break;
+            case mode_NOP:
+                NOP();
+                break;
+        }
     }
     return 0;
 }

@@ -61,4 +61,12 @@ void PlayBuzzerMs(uint16_t duration);
 
 void putch(char data);
 
+enum status {
+    mode_MENU,
+    mode_VALUE,
+    mode_NOP
+};
+
+volatile enum status status = mode_NOP;
+
 #endif

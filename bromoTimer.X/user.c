@@ -23,7 +23,7 @@ void InitApp(void)
      *        xx       */
     TRISA = 0b00101111;
     WPUA  = 0b00100111;
-    IOCA  = 0b00000011; /* Enable interrupt on change */
+    IOCA  = 0b00100000; /* Enable interrupt on change */
 
     /* All RB* are outputs used for the display */
     /* Unused I/O:
