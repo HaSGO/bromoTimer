@@ -195,7 +195,7 @@ void lcd_define_char (uint8_t c, const uint8_t *bitmap)			// Define user-defined
 	lcd_command ((0b01000000) | (c << 3));					// Select char to define
 
 	LCD_RS = 1;
-	for (i = 0; i < 8; i++)
+	for (i = 0; i < 8; ++i)
 		lcd_putbyte (*bitmap++);				//	Put in each uint8_t of memory
 	}
 #endif
@@ -361,7 +361,7 @@ void lcd_scroll (void)							// Scroll up one line
 		}
 	while (SrcAddr <= EndAddr);					// Loop through all memory
 
-	for (Character = 1; Character <= LCD_MAXCOLS; Character++)
+	for (Character = 1; Character <= LCD_MAXCOLS; ++Character)
 		{
 		lcd_gotoxy (LCD_MAXROWS, Character);			//	Position on last line
 		lcd_putc (' ');						//	Blank out the char
@@ -404,7 +404,7 @@ void lcd_unscroll (void)						// Roll scroll backwards one line
 		}
 	while (SrcAddr != 0x80);					// Loop through all memory
 
-	for (Character = 0; Character < LCD_MAXCOLS; Character++)
+	for (Character = 0; Character < LCD_MAXCOLS; ++Character)
 		{
 		lcd_gotoxy (1, Character);				//	Position on top row
 		lcd_putc (' ');						//	Blank out the char
@@ -451,6 +451,6 @@ void lcd_init (void)							// Reset display from software
 	lcd_putbyte (0b00110000);
 	lcd_putbyte (0b00110000);					// Off and running...
 #endif
-	for (i = 0; i < sizeof(LCD_INIT_STRING); i++)			// Send other LCD initialization stuff
+	for (i = 0; i < sizeof(LCD_INIT_STRING); ++i)			// Send other LCD initialization stuff
             lcd_command (LCD_INIT_STRING[i]);
 	}

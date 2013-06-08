@@ -16,7 +16,7 @@ void ConfigureOscillator(void) {
 }
 
 void PlayBuzzerMs(uint16_t ms) {
-    for ( uint8_t i = 0; i < 8; i++) {
+    for ( uint8_t i = 0; i < 8; ++i) {
         uint16_t tmp = ms;
         while (--tmp) {
             __delay_us(125);
