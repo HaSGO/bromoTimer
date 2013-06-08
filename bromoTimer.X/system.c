@@ -25,7 +25,7 @@ void PlayBuzzerMs(uint16_t ms) {
     }
 }
 
-void putch(char data) {
+void putch(const char data) {
     static uint8_t counter = 0;
     if (data == 2) {
         counter = 0;
