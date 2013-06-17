@@ -57,6 +57,7 @@ uint8_t main(void)
         SelfTest();
         printf("\x2...end");
 	__delay_ms(200);
+	while (ENC_SW == 0) NOP();
     }
     printf("\x2HaSGO Bromograph");
 
