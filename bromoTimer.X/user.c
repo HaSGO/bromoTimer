@@ -49,9 +49,19 @@ void InitApp(void)
     ENC_LR = 0;
     ENC_LG = 0;
 
+    /* Timer1 initializations */
+    TMR1CS = 0; /* Timer1 source is fosc/4 */
+    T1CON |= 0b00110000;
+    /* Set initial timer value at 31250 so we get 65536 - 34268 = 31250 counts. */
+    /* Fosc is 1 MHz, Fosc/4 is 250kHz. We use a 1:8 prescaler, which gives us
+     * 31250 kHz. If we count 34268 impulses at that frequency, we count one second. */
+    TMR1H = 0b10000101;
+    TMR1L = 0b11101110;
+
     lcd_init();
 
     /* Enable interrupts */
-    INTCON |= 0b10001000; /* Enable global and PORTA interrupts */
+    INTCON |= 0b11001000; /* Enable global, PORTA and peripheral interrupts */
+    PIE1   |= 0b00000001; /* Enable Timer1 interrupt */
 }
 

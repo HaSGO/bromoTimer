@@ -43,6 +43,43 @@ inline void SelfTest() {
     PlayBuzzerMs(200);
 }
 
+/* This function reads system flags and acts upon them. */
+void inline ProcessFlags() {
+    if( system_flags & ENCODER_BUTTON_PRESSED ) {
+	system_flags &= ~ENCODER_BUTTON_PRESSED; /* Reset encoder flag */
+	if (status == mode_NOP) {
+	    status = mode_SET;
+	} else if (status == mode_SET){
+	    //Start countdown
+	    status = mode_COUNTDOWN;
+	    TMR1ON = 1;
+	    LAMP_1 = 1;
+	    LAMP_2 = 1;
+	}
+
+    }
+    if (system_flags & TIMER1_OVERFLOW) {
+	system_flags &= ~TIMER1_OVERFLOW;
+	/* Reset timer value */
+	TMR1H = 0b10000101;
+	TMR1L = 0b11101110;
+	/* decrement second counter */
+	if (!--seconds){ /* If we are decrementing to 0, we are done */
+	    LAMP_1 = 0;
+	    LAMP_2 = 0;
+	    TMR1ON = 0;
+	    status = mode_NOP;
+
+	    printf("\x2 Done!");
+	    PlayBuzzerMs(100);
+	    __delay_ms(100);
+	    PlayBuzzerMs(100);
+	} else {
+	    printf("\x2Remaining %us", seconds);
+	}
+    }
+}
+
 uint8_t main(void)
 {
     /* Configure the oscillator for the device */
@@ -65,12 +102,10 @@ uint8_t main(void)
     static uint8_t old_AB = 0;
 
     while (1) {
+	ProcessFlags();
+
         switch (status) {
-            case mode_MENU:
-                printf("\x02Menu");
-                status = mode_NOP;
-                break;
-            case mode_VALUE:
+            case mode_SET:
                 old_AB <<= 2; //remember previous state
                 old_AB |= (PORTA & 0x03); //add current state
                 if (enc_states[(old_AB & 0x0f)]) {

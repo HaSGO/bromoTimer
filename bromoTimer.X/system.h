@@ -62,11 +62,20 @@ void PlayBuzzerMs(uint16_t duration);
 void putch(char data);
 
 enum status {
-    mode_MENU,
-    mode_VALUE,
+    mode_COUNTDOWN,
+    mode_SET,
     mode_NOP
 };
 
 volatile enum status status = mode_NOP;
+
+/* System flag variable. The flags are:
+ * bit 0: encoder button pressed
+ * bit 1: timer1 overflow
+ */
+volatile uint8_t system_flags = 0;
+
+#define ENCODER_BUTTON_PRESSED	0x01
+#define TIMER1_OVERFLOW		0x02
 
 #endif

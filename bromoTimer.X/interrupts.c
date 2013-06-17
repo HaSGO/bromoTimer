@@ -14,15 +14,16 @@
 
 void interrupt isr(void)
 {
-    if (RABIF){
+    if (RABIF){ /* PORTA/B interrupt */
         RABIF = 0;
         __delay_ms(20);
         if(ENC_SW == 0){
-            if (status == mode_MENU) {
-		status = mode_VALUE;
-            } else {
-		status = mode_MENU;
-            }
+            /* Set appropriate system flag */
+            system_flags = (system_flags | ENCODER_BUTTON_PRESSED);
         }
+    }
+    if (TMR1IF) { /* Timer1 interrupt */
+	TMR1IF = 0;
+	system_flags = (system_flags | TIMER1_OVERFLOW);
     }
 }
