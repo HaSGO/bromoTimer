@@ -16,13 +16,13 @@
 /* User Global Variable Declaration                                           */
 /******************************************************************************/
 
-/* i.e. uint8_t <variable_name>; */
+/* Current encoder value set by user */
+uint16_t seconds = 1;
 
 /******************************************************************************/
 /* Main Program                                                               */
 
 /******************************************************************************/
-
 
 inline void SelfTest() {
     ENC_LR = 1;
@@ -62,7 +62,6 @@ uint8_t main(void)
     printf("\x2HaSGO Bromograph");
 
     static const int8_t enc_states[] = {0, -1, 1, 0, 1, 0, 0, -1, -1, 0, 0, 1, 0, 1, -1, 0};
-    volatile uint16_t enc_val = 0;
     static uint8_t old_AB = 0;
 
     while (1) {
@@ -75,9 +74,9 @@ uint8_t main(void)
                 old_AB <<= 2; //remember previous state
                 old_AB |= (PORTA & 0x03); //add current state
                 if (enc_states[(old_AB & 0x0f)]) {
-                    enc_val += enc_states[(old_AB & 0x0f)];
+                    seconds += enc_states[(old_AB & 0x0f)];
                     lcd_command(LCD_COMMAND_CLEAR);
-                    printf("\x02Value: %d", enc_val);
+                    printf("\x02Value: %u", seconds);
                 }
                 break;
             case mode_NOP:
