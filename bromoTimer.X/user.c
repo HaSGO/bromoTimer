@@ -65,3 +65,21 @@ void InitApp(void)
     PIE1   |= 0b00000001; /* Enable Timer1 interrupt */
 }
 
+inline void SelfTest() {
+    ENC_LR = 1;
+    __delay_ms(500);
+    ENC_LR = 0;
+    ENC_LG = 1;
+    __delay_ms(500);
+    ENC_LG = 0;
+    EXT_LED = 1;
+    __delay_ms(500);
+    EXT_LED = 0;
+    LAMP_1 = 1;
+    __delay_ms(500);
+    LAMP_1 = 0;
+    LAMP_2 = 1;
+    __delay_ms(500);
+    LAMP_2 = 0;
+    PlayBuzzerMs(500);
+}

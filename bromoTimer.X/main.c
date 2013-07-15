@@ -24,25 +24,6 @@ uint16_t seconds = 1;
 
 /******************************************************************************/
 
-inline void SelfTest() {
-    ENC_LR = 1;
-    __delay_ms(200);
-    ENC_LR = 0;
-    ENC_LG = 1;
-    __delay_ms(200);
-    ENC_LG = 0;
-    EXT_LED = 1;
-    __delay_ms(200);
-    EXT_LED = 0;
-    LAMP_1 = 1;
-    __delay_ms(200);
-    LAMP_1 = 0;
-    LAMP_2 = 1;
-    __delay_ms(200);
-    LAMP_2 = 0;
-    PlayBuzzerMs(200);
-}
-
 /* This function reads system flags and acts upon them. */
 void inline ProcessFlags() {
     if( system_flags & ENCODER_BUTTON_PRESSED ) {
