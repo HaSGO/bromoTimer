@@ -29,13 +29,16 @@ void inline ProcessFlags() {
     if( system_flags & ENCODER_BUTTON_PRESSED ) {
 	system_flags &= ~ENCODER_BUTTON_PRESSED; /* Reset encoder flag */
 	if (status == mode_NOP) {
+	    printf("\x02Turn knob to set");
 	    status = mode_SET;
 	} else if (status == mode_SET){
 	    //Start countdown
 	    status = mode_COUNTDOWN;
+	    printf("\x02Remaining %us", seconds);
 	    TMR1ON = 1;
 	    LAMP_1 = 1;
 	    LAMP_2 = 1;
+            EXT_LED = 1;
 	}
 
     }
@@ -49,14 +52,16 @@ void inline ProcessFlags() {
 	    LAMP_1 = 0;
 	    LAMP_2 = 0;
 	    TMR1ON = 0;
+            EXT_LED = 0;
 	    status = mode_NOP;
 
-	    printf("\x2 Done!");
+	    printf("\x02Done!");
 	    PlayBuzzerMs(100);
 	    __delay_ms(100);
 	    PlayBuzzerMs(100);
 	} else {
-	    printf("\x2Remaining %us", seconds);
+	    lcd_gotoxy(2,3);	/* Go to a space after the word "remaining" */
+	    printf("%us", seconds);
 	}
     }
 }
@@ -70,14 +75,14 @@ uint8_t main(void)
     InitApp();
 
     if (ENC_SW == 0) {
-	printf("\x2Self test...");
+	printf("\x02Self test...");
 	__delay_ms(200);
         SelfTest();
         printf("\x2...end");
 	__delay_ms(200);
 	while (ENC_SW == 0) NOP();
     }
-    printf("\x2HaSGO Bromograph");
+    printf("\x02HaSGO Bromograph");
 
     static const int8_t enc_states[] = {0, -1, 1, 0, 1, 0, 0, -1, -1, 0, 0, 1, 0, 1, -1, 0};
     static uint8_t old_AB = 0;
@@ -92,7 +97,7 @@ uint8_t main(void)
                 if (enc_states[(old_AB & 0x0f)]) {
                     seconds += enc_states[(old_AB & 0x0f)];
                     lcd_command(LCD_COMMAND_CLEAR);
-                    printf("\x02Value: %u", seconds);
+                    printf("\x02Timer: %us", seconds);
                 }
                 break;
             case mode_NOP:
