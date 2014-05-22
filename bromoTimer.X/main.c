@@ -29,7 +29,7 @@ void inline ProcessFlags() {
     if( system_flags & ENCODER_BUTTON_PRESSED ) {
 	system_flags &= ~ENCODER_BUTTON_PRESSED; /* Reset encoder flag */
 	if (status == mode_NOP) {
-	    printf("\x02Turn knob to set");
+	    printf("\rTurn knob to set");
 	    status = mode_SET;
 	} else if (status == mode_SET){
 	    //Start countdown
@@ -50,7 +50,7 @@ void inline ProcessFlags() {
             EXT_LED = 0;
 	    status = mode_NOP;
 
-	    printf("\x02Done!");
+	    printf("\rDone!");
 	    PlayBuzzerMs(100);
 	    __delay_ms(100);
 	    PlayBuzzerMs(100);
@@ -70,14 +70,14 @@ uint8_t main(void)
     InitApp();
 
     if (ENC_SW == 0) {
-	printf("\x02Self test...");
+	printf("\rSelf test...");
 	__delay_ms(200);
         SelfTest();
-        printf("\x2...end");
+        printf("\r...end");
 	__delay_ms(200);
 	while (ENC_SW == 0) NOP();
     }
-    printf("\x02HaSGO Bromograph");
+    printf("\rHaSGO Bromograph");
 
     static const int8_t enc_states[] = {0, -1, 1, 0, 1, 0, 0, -1, -1, 0, 0, 1, 0, 1, -1, 0};
     static uint8_t old_AB = 0;
@@ -92,7 +92,7 @@ uint8_t main(void)
                 if (enc_states[(old_AB & 0x0f)]) {
                     seconds += enc_states[(old_AB & 0x0f)];
                     lcd_command(LCD_COMMAND_CLEAR);
-                    printf("\x02Timer: %us", seconds);
+                    printf("\rTimer: %us", seconds);
                 }
                 break;
             case mode_NOP:

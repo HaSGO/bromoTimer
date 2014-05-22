@@ -27,7 +27,7 @@ void PlayBuzzerMs(uint16_t ms) {
 
 void putch(const char data) {
     static uint8_t counter = 0;
-    if (data == 2) {
+    if (data == '\r') {
         counter = 0;
         return;
     }
@@ -42,7 +42,7 @@ void putch(const char data) {
 
 void start_countdown(uint16_t seconds) {
     status = mode_COUNTDOWN;
-    printf("\x02Remaining %us", seconds);
+    printf("\rRemaining %us", seconds);
     TMR1ON = 1;
     LAMP_1 = 1;
     LAMP_2 = 1;
