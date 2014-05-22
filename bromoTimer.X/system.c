@@ -12,15 +12,15 @@
 /* Refer to the device datasheet for information about available
 oscillator configurations. */
 void ConfigureOscillator(void) {
-    OSCCON=0b01000001; /* Oscillatore interno, 1MHz clock*/
+    OSCCON = 0b01000001; /* Oscillatore interno, 1MHz clock*/
 }
 
 void PlayBuzzerMs(uint16_t ms) {
-    for ( uint8_t i = 0; i < 8; ++i) {
+    for (uint8_t i = 0; i < 8; ++i) {
         uint16_t tmp = ms;
         while (--tmp) {
             __delay_us(125);
-            BUZZER=~BUZZER;
+            BUZZER = ~BUZZER;
         }
     }
 }
@@ -34,7 +34,7 @@ void putch(const char data) {
     if (counter == 0)
         lcd_command(LCD_COMMAND_CLEAR);
     else if (counter == 8) {
-        lcd_gotoxy(8,1);
+        lcd_gotoxy(8, 1);
     }
     counter++;
     lcd_putc(data);

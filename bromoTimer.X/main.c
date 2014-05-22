@@ -26,50 +26,50 @@ uint16_t seconds = 1;
 
 /* This function reads system flags and acts upon them. */
 void inline ProcessFlags() {
-    if( system_flags & ENCODER_BUTTON_PRESSED ) {
-	system_flags &= ~ENCODER_BUTTON_PRESSED; /* Reset encoder flag */
-	if (status == mode_NOP) {
-	    printf("\rTurn knob to set");
-	    status = mode_SET;
-	} else if (status == mode_SET){
-	    //Start countdown
+    if (system_flags & ENCODER_BUTTON_PRESSED) {
+        system_flags &= ~ENCODER_BUTTON_PRESSED; /* Reset encoder flag */
+        if (status == mode_NOP) {
+            printf("\rTurn knob to set");
+            status = mode_SET;
+        } else if (status == mode_SET) {
+            //Start countdown
             start_countdown(seconds);
-	}
+        }
 
     }
     if (system_flags & LID_OPEN) {
         // User has opened lid. Check if we are counting down.
-        if (status == mode_COUNTDOWN){
+        if (status == mode_COUNTDOWN) {
             TMR1ON = 0; //Stop timer
             printf("\rLid open");
         }
     }
     if (system_flags & TIMER1_OVERFLOW) {
-	system_flags &= ~TIMER1_OVERFLOW;
-	/* Reset timer value */
-	TMR1H = 0b10000101;
-	TMR1L = 0b11101110;
-	/* decrement second counter */
-	if (!--seconds){ /* If we are decrementing to 0, we are done */
-	    LAMP_1 = 0;
-	    LAMP_2 = 0;
-	    TMR1ON = 0;
+        system_flags &= ~TIMER1_OVERFLOW;
+        /* Reset timer value */
+        TMR1H = 0b10000101;
+        TMR1L = 0b11101110;
+        /* decrement second counter */
+        if (!--seconds) { /* If we are decrementing to 0, we are done */
+            LAMP_1 = 0;
+            LAMP_2 = 0;
+            TMR1ON = 0;
             EXT_LED = 0;
-	    status = mode_NOP;
+            status = mode_NOP;
 
-	    printf("\rDone!");
-	    PlayBuzzerMs(100);
-	    __delay_ms(100);
-	    PlayBuzzerMs(100);
-	} else {
-	    lcd_gotoxy(2,3);	/* Go to a space after the word "remaining" */
-	    printf("%us", seconds);
-	}
+            printf("\rDone!");
+            PlayBuzzerMs(100);
+            __delay_ms(100);
+            PlayBuzzerMs(100);
+        } else {
+            lcd_gotoxy(2, 3); /* Go to a space after the word "remaining" */
+            printf("%us", seconds);
+        }
     }
 }
 
-uint8_t main(void)
-{
+uint8_t main(void) {
+    EXT_LED == 1;
     /* Configure the oscillator for the device */
     ConfigureOscillator();
 
@@ -77,12 +77,12 @@ uint8_t main(void)
     InitApp();
 
     if (ENC_SW == 0) {
-	printf("\rSelf test...");
-	__delay_ms(200);
+        printf("\rSelf test...");
+        __delay_ms(200);
         SelfTest();
         printf("\r...end");
-	__delay_ms(200);
-	while (ENC_SW == 0) NOP();
+        __delay_ms(200);
+        while (ENC_SW == 0) NOP();
     }
     printf("\rHaSGO Bromograph");
 
@@ -90,7 +90,7 @@ uint8_t main(void)
     static uint8_t old_AB = 0;
 
     while (1) {
-	ProcessFlags();
+        ProcessFlags();
 
         switch (status) {
             case mode_SET:
@@ -107,5 +107,6 @@ uint8_t main(void)
                 break;
         }
     }
+
     return 0;
 }
