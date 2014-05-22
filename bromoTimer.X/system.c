@@ -32,7 +32,7 @@ void putch(const char data) {
         return;
     }
     if (counter == 0)
-        lcd_command(LCD_COMMAND_CLEAR);
+        lcd_clear();
     else if (counter == 8) {
         lcd_gotoxy(8, 1);
     }

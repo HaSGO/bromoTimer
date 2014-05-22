@@ -98,7 +98,7 @@ uint8_t main(void) {
                 old_AB |= (PORTA & 0x03); //add current state
                 if (enc_states[(old_AB & 0x0f)]) {
                     seconds += enc_states[(old_AB & 0x0f)];
-                    lcd_command(LCD_COMMAND_CLEAR);
+                    lcd_clear();
                     printf("\rTimer: %us", seconds);
                 }
                 break;
