@@ -39,3 +39,12 @@ void putch(const char data) {
     counter++;
     lcd_putc(data);
 }
+
+void start_countdown(uint16_t seconds) {
+    status = mode_COUNTDOWN;
+    printf("\x02Remaining %us", seconds);
+    TMR1ON = 1;
+    LAMP_1 = 1;
+    LAMP_2 = 1;
+    EXT_LED = 1;
+}

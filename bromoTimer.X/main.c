@@ -33,12 +33,7 @@ void inline ProcessFlags() {
 	    status = mode_SET;
 	} else if (status == mode_SET){
 	    //Start countdown
-	    status = mode_COUNTDOWN;
-	    printf("\x02Remaining %us", seconds);
-	    TMR1ON = 1;
-	    LAMP_1 = 1;
-	    LAMP_2 = 1;
-            EXT_LED = 1;
+            start_countdown(seconds);
 	}
 
     }
