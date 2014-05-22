@@ -37,6 +37,13 @@ void inline ProcessFlags() {
 	}
 
     }
+    if (system_flags & LID_OPEN) {
+        // User has opened lid. Check if we are counting down.
+        if (status == mode_COUNTDOWN){
+            TMR1ON = 0; //Stop timer
+            printf("\rLid open");
+        }
+    }
     if (system_flags & TIMER1_OVERFLOW) {
 	system_flags &= ~TIMER1_OVERFLOW;
 	/* Reset timer value */

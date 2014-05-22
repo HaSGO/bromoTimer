@@ -21,6 +21,9 @@ void interrupt isr(void)
             /* Set appropriate system flag */
             system_flags = (system_flags | ENCODER_BUTTON_PRESSED);
         }
+        if (EXT_LID == 0){
+            system_flags = (system_flags | LID_OPEN);
+        }
     }
     if (TMR1IF) { /* Timer1 interrupt */
 	TMR1IF = 0;

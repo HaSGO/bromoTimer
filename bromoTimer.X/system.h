@@ -72,10 +72,12 @@ volatile enum status status = mode_NOP;
 /* System flag variable. The flags are:
  * bit 0: encoder button pressed
  * bit 1: timer1 overflow
+ * bit 3: lid opened
  */
 volatile uint8_t system_flags = 0;
 
 #define ENCODER_BUTTON_PRESSED	0x01
 #define TIMER1_OVERFLOW		0x02
+#define LID_OPEN                0x04
 
 #endif
