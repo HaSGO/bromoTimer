@@ -2633,7 +2633,7 @@ design rules under a new name.</description>
 </element>
 <element name="F1" library="fuse" package="SH22" value="250V-500mA" x="5.08" y="67.31" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="69.85" y="147.32" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="64900001039" x="69.85" y="147.32" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="" x="69.85" y="147.32" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="69.85" y="147.32" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="69.85" y="147.32" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
