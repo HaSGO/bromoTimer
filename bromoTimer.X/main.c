@@ -38,6 +38,7 @@ void inline ProcessFlags() {
 
     }
     if (system_flags & LID_OPEN) {
+        system_flags &= ~LID_OPEN; /* Reset lid open flag */
         // User has opened lid. Check if we are counting down.
         if (status == mode_COUNTDOWN) {
             TMR1ON = 0; //Stop timer
