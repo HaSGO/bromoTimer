@@ -30,6 +30,9 @@ void putch(const char data) {
     if (data == '\r') {
         counter = 0;
         return;
+    } else if (data == '\n') {
+        counter = 8;
+        return;
     }
     if (counter == 0)
         lcd_clear();
