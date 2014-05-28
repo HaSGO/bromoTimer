@@ -18,6 +18,11 @@
 
 void InitApp(void)
 {
+
+    /* Disable analog stuff */
+    ANSEL = 0;
+    ANSELH = 0;
+
     /* Only output is RA4 */
     /* Unused I/O:
      *        xx       */
@@ -36,10 +41,6 @@ void InitApp(void)
 
     /* enable weak pull-ups globally */
     OPTION_REG &= 0b01111111;
-
-    /* Disable analog stuff */
-    ANSEL = 0;
-    ANSELH = 0;
 
     /* Initialize peripherals */
     BUZZER = 0;
