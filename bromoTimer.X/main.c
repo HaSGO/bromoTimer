@@ -77,13 +77,13 @@ uint8_t main(void) {
     /* Initialize I/O and Peripherals for application */
     InitApp();
 
-    if (ENC_SW == 0) {
+    if (EXT_SW == 0) {
         printf("\rSelf test...");
         __delay_ms(200);
         SelfTest();
         printf("\r...end");
         __delay_ms(200);
-        while (ENC_SW == 0) NOP();
+        while (EXT_SW == 0) NOP();
     }
     printf("\rHaSGO Bromograph");
 
