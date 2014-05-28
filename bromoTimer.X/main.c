@@ -70,7 +70,6 @@ void inline ProcessFlags() {
 }
 
 uint8_t main(void) {
-    EXT_LED == 1;
     /* Configure the oscillator for the device */
     ConfigureOscillator();
 
@@ -85,6 +84,9 @@ uint8_t main(void) {
         __delay_ms(200);
         while (EXT_SW == 0) NOP();
     }
+
+    EXT_LED = 1;
+
     printf("\rHaSGO Bromograph");
 
     static const int8_t enc_states[] = {0, -1, 1, 0, 1, 0, 0, -1, -1, 0, 0, 1, 0, 1, -1, 0};
